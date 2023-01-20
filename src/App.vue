@@ -5,15 +5,14 @@
   <main>
     <router-view />
   </main>
-   <footer class="bg-dark text-light">
-    Made with 💖 by CodeWorks
-  </footer>
+  <Footer />
 </template>
 
 <script>
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   setup() {
@@ -21,7 +20,7 @@ export default {
       appState: computed(() => AppState)
     }
   },
-  components: { Navbar }
+  components: { Navbar, Footer }
 }
 </script>
 <style lang="scss">
@@ -32,9 +31,9 @@ export default {
 }
 
 
-footer {
+/* footer {
   display: grid;
   place-content: center;
   height: 32px;
-}
+} */
 </style>
